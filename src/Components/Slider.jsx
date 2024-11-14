@@ -5,7 +5,7 @@ export const Slider = () => {
   return (
     <div className="flex items-center p-4 bg-base-200">
       <p className="py-2 px-6 bg-[#D72050] text-white">Latest</p>
-      <p>
+      <div>
         <Marquee speed={40}>
           <Link to={"/news"} className="ml-8">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod,
@@ -28,7 +28,7 @@ export const Slider = () => {
             eveniet.
           </Link>
         </Marquee>
-      </p>
+      </div>
     </div>
   );
 };
