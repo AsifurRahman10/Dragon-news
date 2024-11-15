@@ -17,7 +17,6 @@ const githubProvider = new GithubAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(user);
   // handle register
   const handleUserRegister = (email, password) => {
     setLoading(true);
@@ -35,11 +34,8 @@ const AuthProvider = ({ children }) => {
 
   // update profile
 
-  const handleUpdateProfile = (name, photo) => {
-    updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: photo,
-    });
+  const handleUpdateProfile = (updateData) => {
+    return updateProfile(auth.currentUser, updateData);
   };
 
   //   handle observer user
@@ -74,6 +70,7 @@ const AuthProvider = ({ children }) => {
     handleUpdateProfile,
     loginWithGoogle,
     loginWithGithub,
+    setLoading,
   };
 
   return (

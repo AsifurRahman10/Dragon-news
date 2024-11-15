@@ -21,13 +21,9 @@ export const Register = () => {
     setError(false);
     handleUserRegister(email, password).then((res) => {
       setUser(res.user);
-      handleUpdateProfile(name, photo)
-        .then(() => {
-          navigate("/");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
+      handleUpdateProfile({ displayName: name, photoURL: photo }).then(() => {
+        navigate("/");
+      });
     });
   };
   return (

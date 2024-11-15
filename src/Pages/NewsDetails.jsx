@@ -11,7 +11,7 @@ export const NewsDetails = () => {
       <header className="">
         <Header></Header>
       </header>
-      <main className="w-9/12 mx-auto grid grid-cols-1 md:grid-cols-12 mt-8 gap-6">
+      <main className="w-11/12 md:w-9/12 mx-auto grid grid-cols-1 md:grid-cols-12 mt-8 gap-6">
         <section className="col-span-9">
           <h3 className="text-2xl font-bold">Dragon News</h3>
           <div className="mt-4">
